@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Welcome Back!</title>
+    </head>
+    <body>
+        <h1>Welcome back, {{ user }}</h1>
+        <form action="/logout" method="GET">
+            {% raw xsrf_form_html() %}
+            <input type="submit" name="Log Out" value="Log Out" />
+        </form>
+        <form action="/user" method="GET">
+            {% raw xsrf_form_html() %}
+            <input type="submit" name="User" value="User" />
+        </form>
+        <form action="/admin" method="GET">
+            {% raw xsrf_form_html() %}
+            <input type="submit" name="Admin" value="Admin" />
+        </form>
+        <form action="/vip" method="GET">
+            {% raw xsrf_form_html() %}
+            <input type="submit" name="VIP" value="VIP" />
+        </form>
+    </body>
+</html>

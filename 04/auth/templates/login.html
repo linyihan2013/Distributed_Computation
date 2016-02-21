@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Please Log In</title>
+    </head>
+
+    <body>
+        <form action="/login" method="POST">
+            {% raw xsrf_form_html() %}
+            Username: <input type="text" name="username" />
+            Password: <input type="text" name="password" />
+            <select id="mode" name="mode">
+                <option value="user" selected="">user</option>
+                <option value="admin">admin</option>
+                <option value="vip">vip</option>
+            </select>
+            <input type="submit" value="Log In" />
+        </form>
+    </body>
+</html>

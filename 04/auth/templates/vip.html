@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>VIP!</title>
+    </head>
+    <body>
+        <h1>{{ user }}, you are a VIP!</h1>
+        <form action="/logout" method="GET">
+            {% raw xsrf_form_html() %}
+            <input type="submit" name="Log Out" value="Log Out" />
+        </form>
+        <form action="/" method="GET">
+            {% raw xsrf_form_html() %}
+            <input type="submit" name="Welcome" value="Welcome" />
+        </form>
+    </body>
+</html>
